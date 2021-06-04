@@ -1,0 +1,23 @@
+{
+  "name": "tuturno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgutierrez8/tuturno.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgutierrez8/tuturno/issues"
+  },
+  "homepage": "https://github.com/rgutierrez8/tuturno#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2"
+  }
+}

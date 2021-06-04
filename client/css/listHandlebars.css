@@ -1,0 +1,83 @@
+.filter{
+    display: inline-block;
+    vertical-align: top;
+    position: sticky;
+    top: 150px;
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    margin: 20px;
+}
+.filter input{
+    margin: 10px;
+    border-radius: 15px;
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+}
+#inputStadium{
+    width: 200px;
+    font-size: 18px;
+}
+#inputSubmit{
+    width: 100px;
+    height: 30px;
+    margin: 10px 30px;
+}
+#inputSubmit:hover{
+    transition: .5s;
+    background: black;
+    color: white;
+}
+
+#pAlert{
+    position: relative;
+    top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.alertHidden{
+    visibility: hidden;
+}
+
+.results{
+    display: inline-block;
+    position:relative;
+    left: 60px;
+    width: 70%;
+    min-height: 550px;
+    background: rgb(221, 221, 221);
+    margin: 20px;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px black;
+}
+
+.list{
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.list img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.info{
+    display: inline-block;
+    vertical-align: top;
+}
+.info h3, .list p{
+    position: relative;
+    top: 15px;
+    color: black;
+    margin: 3px;
+}
+.info a{
+    text-decoration: none;
+}

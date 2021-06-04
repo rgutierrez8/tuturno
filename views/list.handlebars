@@ -1,0 +1,18 @@
+<div class="filter">
+    <input tipe="text" id="inputStadium" placeholder="Cancha">
+    <input type="time" min="14:00" max="23:00" id="inputTime">
+    <input type="submit" id="inputSubmit" value="Filtrar">
+    <p id="pAlert" class="alertHidden">Mensaje de alerta por acción incorrecta</p>
+</div>
+<div class="results">
+    {{#each turn}}
+    <div class="list">
+        <a href="/selectTurn"><img src="img/{{this.logo}}"></a>
+        <div class="info">
+            <a href="/selectTurn"><h3>{{this.name}}</h3></a>
+            <p>${{this.price}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<script src="js/list.js"></script>

@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Club Belgrano",
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "available",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Aeroclub",
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "available",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Gelsi",
+        "available":{
+            "14": "taken",
+            "15": "taken",
+            "16": "taken",
+            "17": "taken",
+            "18": "taken",
+            "19": "taken",
+            "20": "available",
+            "21": "taken",
+            "22": "taken",
+            "23": "taken"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    }
+]

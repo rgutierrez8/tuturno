@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    background: #f2f2f2;
+    font-family: 'Dubai';
+}
+
+/*====== HEADER =========*/
+.hero{
+    background: url(../img/cancha.jpg);
+    height: 100vh;
+    background-size: cover;
+    text-align: center;
+}
+
+.container-header{
+    padding-top: 40px;
+}
+.social-network{
+    text-align: center;
+}
+
+.social-network a{
+    color: white;
+    font-size: 30px;
+    margin-right: 40px;
+}
+.face:hover{
+    color: blue;
+}
+.twitter:hover{
+    color: rgb(0, 195, 255);
+}
+.instagram:hover{
+    color: blueviolet;
+}
+
+#btnSearch{
+    position: relative;
+    top: 254px;
+    right: 50px;
+    width: 300px;
+    height: 43px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+#btnSearch i{
+    margin: auto 10px;
+}
+#btnSearch:hover{
+    transition: 1s;
+    border: 2px solid greenyellow;
+}
+#btnSearch:hover i{
+    transition: .5s;
+    color:greenyellow;
+}
+
+blockquote{
+    color:white;
+    font-size: 28px;
+    text-align: right;
+    position: relative;
+    top: 420px;
+}
+
+/*======= BARRA DE NAVEGACION ======*/
+
+.nav-container{
+    position: sticky;
+    top: 0px;
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-nav a{
+    margin-right: 30px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.main-nav a:hover{
+    overflow: hidden;
+    font-weight: bold;
+}
+
+/*===== SECTION =======*/
+.main{
+    padding: 30px;
+    text-align: center;
+}
+.main h1{
+    font-size: 30px;
+    padding: 30px;
+}
+.steps{
+    display: inline-block;
+    margin: 40px;
+    font-size: 18px;
+}
+.steps img{
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+}
+
+.coment-users{
+    text-align: center;
+}
+.coment{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    height: 320px;
+    display: inline-block;
+    margin: 40px;
+    padding: 20px;
+}
+.coment img{
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+/*====== FOOTER ======*/
+
+.end{
+    height: 40px;
+    background: black;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+}
