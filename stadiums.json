@@ -5,7 +5,7 @@
         "available":{
             "14": "available",
             "15": "available",
-            "16": "available",
+            "16": "taken",
             "17": "available",
             "18": "available",
             "19": "available",
@@ -13,7 +13,8 @@
             "21": "available",
             "22": "available",
             "23": "available"
-        }
+        },
+        "price": 1000
     },
     {
         "id": 2,
@@ -29,7 +30,8 @@
             "21": "available",
             "22": "available",
             "23": "available"
-        }
+        },
+        "price": 1500
     },
     {
         "id": 3,
@@ -45,6 +47,97 @@
             "21": "taken",
             "22": "taken",
             "23": "taken"
+        },
+        "price": 1500
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Sirio Libanesa",
+        "logo": "sirio.png",
+        "price": 1100,
+        "available":{
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
         }
     },
     {

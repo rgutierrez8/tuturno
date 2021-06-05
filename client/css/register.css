@@ -1,0 +1,36 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 100px;
+}
+
+form{
+    background: rgb(201, 201, 201);
+    width: 400px;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 20px rgba(0,0,0,1);
+}
+
+form input{
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    outline: none;
+    font-size: 16px;
+}
+
+form p{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+}

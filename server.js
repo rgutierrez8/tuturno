@@ -23,13 +23,21 @@ app.get("/", (req, res) => {
 
 app.get("/searchTurn", (req, res) => {
 
-    const turn = stadiums.filter(turn => Object.values(turn.available).includes("available"));
-    console.log(turn);
+    let turn = stadiums.filter(turn => Object.values(turn.available).includes("available"));
+
+    if(req.query.stadium){
+        turn = stadiums.filter(turn => turn.name.includes(req.query.stadium));
+    }
+
+    if(req.query.hour){
+        turn = stadiums.filter(turn => turn.available[req.query.hour].includes("available"));
+    }
 
     res.render("list", {
         turn,
         docTitle: `Turnos disponibles`,
         otherCSS: "listHandlebars.css",
+        layout: "secondMain"
     });
 });
 

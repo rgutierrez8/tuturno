@@ -2,62 +2,20 @@ body{
     margin: 0;
     background: #f2f2f2;
     font-family: 'Dubai';
+    overflow-x: hidden;
 }
 
 /*====== HEADER =========*/
+header{
+    position: absolute;
+    top: 35px;
+    width: 100%;
+}
 .hero{
     background: url(../img/cancha.jpg);
     height: 100vh;
     background-size: cover;
     text-align: center;
-}
-
-.container-header{
-    padding-top: 40px;
-}
-.social-network{
-    text-align: center;
-}
-
-.social-network a{
-    color: white;
-    font-size: 30px;
-    margin-right: 40px;
-}
-.face:hover{
-    color: blue;
-}
-.twitter:hover{
-    color: rgb(0, 195, 255);
-}
-.instagram:hover{
-    color: blueviolet;
-}
-
-#btnSearch{
-    position: relative;
-    top: 254px;
-    right: 50px;
-    width: 300px;
-    height: 43px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background: none;
-    color: white;
-    font-size: 18px;
-    letter-spacing: 2px;
-    box-sizing: border-box;
-}
-#btnSearch i{
-    margin: auto 10px;
-}
-#btnSearch:hover{
-    transition: 1s;
-    border: 2px solid greenyellow;
-}
-#btnSearch:hover i{
-    transition: .5s;
-    color:greenyellow;
 }
 
 blockquote{
@@ -69,26 +27,49 @@ blockquote{
 }
 
 /*======= BARRA DE NAVEGACION ======*/
-
-.nav-container{
+nav{
     position: sticky;
-    top: 0px;
+    top: 0;
+    margin: 0;
+    width: 100vw;
     background: black;
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    z-index: 11111;
+}
+nav button{
+    position: relative;
+    left: 600px;
+    width: 300px;
+    height: 43px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+.nav-container i{
+    margin: auto 10px;
 }
 
-.main-nav a{
-    margin-right: 30px;
-    color: white;
-    text-decoration: none;
+.nav-container button:hover i{
+    transition: .5s;
+    color:greenyellow;
+}
+
+.userSection{
+    display: inline-block;
+    position: relative;
+    left: 920px;
+    font-size: 16px;
     letter-spacing: 2px;
 }
-.main-nav a:hover{
-    overflow: hidden;
-    font-weight: bold;
+.userSection a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
 }
-
 /*===== SECTION =======*/
 .main{
     padding: 30px;

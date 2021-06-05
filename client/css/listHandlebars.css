@@ -4,10 +4,11 @@
     position: sticky;
     top: 150px;
     text-align: center;
-    width: 250px;
-    height: 400px;
+    width: 240px;
+    height: 200px;
     text-align: center;
     margin: 20px;
+    overflow: hidden;
 }
 .filter input{
     margin: 10px;
@@ -17,6 +18,27 @@
     text-align: center;
     outline: none;
 }
+
+.help{
+    z-index: 100;
+    background: rgba(0,0,0, .4);
+    display: inline-block;
+    border-radius: 15px;
+    text-align: left;
+    width: 230px;
+    height: 160px;
+    color: white;
+    padding: 5px;
+}
+.helpHidden{
+    display: none;
+}
+
+#helpButton{
+    position: relative;
+    left: 100px;
+}
+
 #inputStadium{
     width: 200px;
     font-size: 18px;

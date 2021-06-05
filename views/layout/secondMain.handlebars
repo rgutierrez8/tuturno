@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/{{otherCSS}}">
     <title>{{docTitle}}</title>
 </head>
@@ -16,8 +17,19 @@
             <a href="#">Ingresar</a>
         </div>
     </nav>
-    <h2>{{description}}</h2>
     <section>
+        <div class="filter">
+            <i class="fas fa-question-circle" id="helpButton"></i>
+            <div class="help helpHidden" id="helpContainer">
+                <p>-Buscar por nombre de cancha</p>
+                <p>-Buscar por horario deseado</p>
+                <p>-Dejar campos vacios muestr las canchas con turnos disponibles</p>
+            </div>
+            <input tipe="text" id="inputStadium" placeholder="Cancha">
+            <input type="time" min="14:00" max="23:00" id="inputTime">
+            <input type="submit" id="inputSubmit" value="Filtrar">
+            <p id="pAlert" class="alertHidden">Mensaje de alerta por acción incorrecta</p>
+        </div>
         {{{body}}}
     </section>
     <footer class="end">
