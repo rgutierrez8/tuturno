@@ -8,16 +8,16 @@
         "nightPrice": 1200,
         "floor": "Mosaicos",
         "available":{
-            "hs14": "available",
-            "hs15": "available",
-            "hs16": "taken",
-            "hs17": "available",
-            "hs18": "available",
-            "hs19": "available",
-            "hs20": "available",
-            "hs21": "available",
-            "hs22": "available",
-            "hs23": "available"
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
         },
         "stage":{
             "one": "cancha1.jpg"
@@ -33,16 +33,16 @@
         "nightPrice": 1800,
         "floor": "Cesped sintético",
         "available":{
-            "hs14": "taken",
-            "hs15": "taken",
-            "hs16": "taken",
-            "hs17": "taken",
-            "hs18": "taken",
-            "hs19": "taken",
-            "hs20": "taken",
-            "hs21": "taken",
-            "hs22": "taken",
-            "hs23": "available"
+            "14": "taken",
+            "15": "taken",
+            "16": "taken",
+            "17": "taken",
+            "18": "taken",
+            "19": "taken",
+            "20": "taken",
+            "21": "taken",
+            "22": "taken",
+            "23": "available"
         },
         "logo": "Aeroclub.png"
     },
@@ -55,16 +55,16 @@
         "nightPrice": 1700,
         "floor": "Cesped sintético",
         "available":{
-            "hs14": "taken",
-            "hs15": "taken",
-            "hs16": "taken",
-            "hs17": "taken",
-            "hs18": "available",
-            "hs19": "available",
-            "hs20": "available",
-            "hs21": "available",
-            "hs22": "available",
-            "hs23": "available"
+            "14": "taken",
+            "15": "taken",
+            "16": "taken",
+            "17": "taken",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
         },
         "logo": "Gelsi.png"
     },
@@ -77,16 +77,16 @@
         "nightPrice": 1300,
         "floor": "Cesped",
         "available":{
-            "hs14": "available",
-            "hs15": "available",
-            "hs16": "taken",
-            "hs17": "available",
-            "hs18": "available",
-            "hs19": "available",
-            "hs20": "available",
-            "hs21": "available",
-            "hs22": "available",
-            "hs23": "available"
+            "14": "available",
+            "15": "available",
+            "16": "taken",
+            "17": "available",
+            "18": "available",
+            "19": "available",
+            "20": "available",
+            "21": "available",
+            "22": "available",
+            "23": "available"
         },
         "stage":{
             "one": "cancha1.jpg",

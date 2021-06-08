@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/searchTurn", (req, res) => {
-
+    let description;
     let turn = stadiums.filter(turn => Object.values(turn.available).includes("available"));
 
     if(req.query.stadium){
@@ -34,7 +34,15 @@ app.get("/searchTurn", (req, res) => {
         turn = stadiums.filter(turn => turn.available[req.query.hour].includes("available"));
     }
 
+    if(Object.entries(turn).length === 0){
+        description = `No se encontraron turnos disponibles`;
+    }
+    else{
+        description = `Turnos disponibles:`;
+    }
+  
     res.render("list", {
+        description,
         turn,
         docTitle: `Turnos disponibles`,
         otherCSS: "listHandlebars.css",

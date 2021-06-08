@@ -2,6 +2,10 @@ section{
     min-height: 604px;
 }
 
+section h2{
+    text-align: center;
+}
+
 .filter{
     display: inline-block;
     vertical-align: top;
