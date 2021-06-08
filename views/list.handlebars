@@ -1,9 +1,9 @@
 <div class="results">
     {{#each turn}}
     <div class="list">
-        <a href="/selectTurn"><img src="img/Logo canchas/{{this.logo}}"></a>
+        <a href="/selectTurn?name={{this.name}}&index={{@index}}"><img src="img/Logo canchas/{{this.logo}}"></a>
         <div class="info">
-            <a href="/selectTurn"><h3>{{this.name}}</h3></a>
+            <a href="/selectTurn?name={{this.name}}&index={{@index}}"><h3>{{this.name}}</h3></a>
             <p>${{this.price}}</p>
         </div>
     </div>
@@ -11,3 +11,4 @@
 </div>
 <script src="js/list.js"></script>
 <script src="js/index.js"></script>
+<script src="js/register.js"></script>

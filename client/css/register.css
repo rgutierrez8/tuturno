@@ -1,26 +1,32 @@
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 100px;
+.formContainer{
+    position: fixed;
+    top: 120px;
+    left: 40%;
+    z-index: 1111111;
 }
 
 form{
-    background: rgb(201, 201, 201);
-    width: 400px;
+    position: relative;
+    bottom: 30px;
+    background: rgba(201, 201, 201, .8);
+    width: 420px;
+    height: 530px;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 15px;
-    text-align: center;
     box-shadow: 2px 2px 20px rgba(0,0,0,1);
 }
 
-form input{
-    display: block;
-    margin: 20px auto;
-    width: 250px;
-    height: 25px;
+.inputData{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 15px;
+}
+
+.inputData input{
+    width: 90%;
+    height: 70%;
     border: none;
     border-bottom: 1px solid black;
     background: none;
@@ -28,9 +34,42 @@ form input{
     font-size: 16px;
 }
 
+form .inputData input:focus ~label,
+form .inputData .inputValid:valid ~label{
+    transform: translateY(-20px);
+    font-size: 15px;
+}
+.inputData label{
+    position: absolute;
+    bottom: 10px;
+    lefT: 0;
+    color: white;
+    pointer-events: none;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]{
+    border: 2px solid black;
+    margin: 10px 30px;
+    background: none;
+    width: 120px;
+    height: 35px;
+}
+form input[type="submit"]:hover{
+    background: black;
+    color: white;
+    transition: .5s;
+}
+
 form p{
-    color: red;
+    color: rgb(163, 0, 0);
     font-size: 18px;
     font-weight: bold;
     margin-top: 40px;
+    text-align: center;
+}
+
+.alertHidden{
+    visibility: hidden;
 }

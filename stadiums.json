@@ -2,160 +2,97 @@
     {
         "id": 1,
         "name": "Club Belgrano",
+        "address": "Belgrano 500",
+        "phone": "03865-424757",
+        "price": 100,
+        "nightPrice": 1200,
+        "floor": "Mosaicos",
         "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
+            "hs14": "available",
+            "hs15": "available",
+            "hs16": "taken",
+            "hs17": "available",
+            "hs18": "available",
+            "hs19": "available",
+            "hs20": "available",
+            "hs21": "available",
+            "hs22": "available",
+            "hs23": "available"
         },
-        "price": 1000
+        "stage":{
+            "one": "cancha1.jpg"
+        },
+        "logo": "Club Belgrano.png"
     },
     {
         "id": 2,
         "name": "Aeroclub",
+        "address": "San Martín 3000",
+        "phone": "03865-4232629",
+        "price": 1500,
+        "nightPrice": 1800,
+        "floor": "Cesped sintético",
         "available":{
-            "14": "available",
-            "15": "available",
-            "16": "available",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
+            "hs14": "taken",
+            "hs15": "taken",
+            "hs16": "taken",
+            "hs17": "taken",
+            "hs18": "taken",
+            "hs19": "taken",
+            "hs20": "taken",
+            "hs21": "taken",
+            "hs22": "taken",
+            "hs23": "available"
         },
-        "price": 1500
+        "logo": "Aeroclub.png"
     },
     {
         "id": 3,
         "name": "Gelsi",
+        "address": "Calle falsa 1234",
+        "phone": "03865-423523",
+        "price": 1500,
+        "nightPrice": 1700,
+        "floor": "Cesped sintético",
         "available":{
-            "14": "taken",
-            "15": "taken",
-            "16": "taken",
-            "17": "taken",
-            "18": "taken",
-            "19": "taken",
-            "20": "available",
-            "21": "taken",
-            "22": "taken",
-            "23": "taken"
+            "hs14": "taken",
+            "hs15": "taken",
+            "hs16": "taken",
+            "hs17": "taken",
+            "hs18": "available",
+            "hs19": "available",
+            "hs20": "available",
+            "hs21": "available",
+            "hs22": "available",
+            "hs23": "available"
         },
-        "price": 1500
+        "logo": "Gelsi.png"
     },
     {
         "id": 4,
         "name": "Sirio Libanesa",
-        "logo": "sirio.png",
+        "address": "Italia 1400",
+        "phone": "03865-423569",
         "price": 1100,
+        "nightPrice": 1300,
+        "floor": "Cesped",
         "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
-    },
-    {
-        "id": 4,
-        "name": "Sirio Libanesa",
-        "logo": "sirio.png",
-        "price": 1100,
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
-    },
-    {
-        "id": 4,
-        "name": "Sirio Libanesa",
-        "logo": "sirio.png",
-        "price": 1100,
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
-    },
-    {
-        "id": 4,
-        "name": "Sirio Libanesa",
-        "logo": "sirio.png",
-        "price": 1100,
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
-    },
-    {
-        "id": 4,
-        "name": "Sirio Libanesa",
-        "logo": "sirio.png",
-        "price": 1100,
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
-    },
-    {
-        "id": 4,
-        "name": "Sirio Libanesa",
-        "logo": "sirio.png",
-        "price": 1100,
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        }
+            "hs14": "available",
+            "hs15": "available",
+            "hs16": "taken",
+            "hs17": "available",
+            "hs18": "available",
+            "hs19": "available",
+            "hs20": "available",
+            "hs21": "available",
+            "hs22": "available",
+            "hs23": "available"
+        },
+        "stage":{
+            "one": "cancha1.jpg",
+            "two": "cancha2.jpg",
+            "three": "cancha3.jpg"
+        },
+        "logo": "sirio.png"
     }
 ]

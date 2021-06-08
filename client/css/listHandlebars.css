@@ -1,3 +1,7 @@
+section{
+    min-height: 604px;
+}
+
 .filter{
     display: inline-block;
     vertical-align: top;
@@ -5,7 +9,7 @@
     top: 150px;
     text-align: center;
     width: 240px;
-    height: 200px;
+    height: 290px;
     text-align: center;
     margin: 20px;
     overflow: hidden;
@@ -26,7 +30,7 @@
     border-radius: 15px;
     text-align: left;
     width: 230px;
-    height: 160px;
+    height: 85%;
     color: white;
     padding: 5px;
 }

@@ -15,13 +15,13 @@ inputSubmit.addEventListener("click", function(){
         if(hour < 14){
             pAlert.textContent = "Horarios habiles a partir de hs: 14:00";
             pAlert.classList.remove("alertHidden");
+            return;
         }
         else{
-            pAlert.classList.add("alertHidden");
             url = `${url}&hour=${hour}`;
+            pAlert.classList.add("alertHidden");
         }
     }
-    console.log(`/searchTurn${url}`);
     window.location.href = `/searchTurn?${url}`;
 });
 

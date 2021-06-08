@@ -1,0 +1,28 @@
+<div class="container">
+    {{#each local}}
+    <div class="imgContainer">
+        <img id="imgView" src="img/canchas/{{this.name}}/{{this.stage.one}}">
+        <div class="imgPrev">
+            <img id="img1" class="selected" src="img/canchas/{{this.name}}/{{this.stage.one}}">
+            <img id="img2" src="img/canchas/{{this.name}}/{{this.stage.two}}">
+            <img id="img3" src="img/canchas/{{this.name}}/{{this.stage.three}}">
+        </div>
+    </div>
+    <div class="info">
+        <h1>{{this.name}}</h1>
+        <h3>Precio: ${{this.price}} /hs día</h3>
+        <h3>Precio: ${{this.nightPrice}} /hs noche</h2>
+        <h3>Turnos: </h3>
+        <div id="hourContainer" class="hourContainer">
+        </div>
+        <button class="selectTurn" id="selectTurn">SOLICITAR</button>
+    </div>
+    <div class="specs">
+        <h2>Especificaciones:</h2>
+        <h3>Dirección: <span>{{this.address}}</span></h3>
+        <h3>Teléfono: <span>{{this.phone}}</span></h3>
+        <h3>Tipo de piso: <span>{{this.floor}}</span></h3>
+        <h3>Cantidad jugadores: <span>5 vs 5 (Recomendado)</span></h3>
+    </div>
+    {{/each}}
+</div>

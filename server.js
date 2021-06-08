@@ -6,6 +6,7 @@ const path = require("path");
 const port = 3000;
 
 const stadiums = require("./stadiums.json");
+const users = require("./users.json");
 
 app.engine("handlebars", expHbs({
     defaultLayout: "main",
@@ -28,7 +29,7 @@ app.get("/searchTurn", (req, res) => {
     if(req.query.stadium){
         turn = stadiums.filter(turn => turn.name.includes(req.query.stadium));
     }
-
+    
     if(req.query.hour){
         turn = stadiums.filter(turn => turn.available[req.query.hour].includes("available"));
     }
@@ -39,6 +40,34 @@ app.get("/searchTurn", (req, res) => {
         otherCSS: "listHandlebars.css",
         layout: "secondMain"
     });
+});
+
+app.get("/selectTurn", (req, res) => {
+
+    const local = stadiums.filter(local => local.name.includes(req.query.name));
+    const hour = Object.keys(local[0].available);
+
+    res.render("stadium", {
+        local,
+        otherCSS: "stadium.css",
+        script: "stadium.js",
+        hour,
+    });
+});
+
+app.get("/signUp", (req, res) => {
+    
+});
+
+app.get("/validate", (req, res) => {
+    let valid = users.filter(user => user.name.includes(req.query.name));
+    res.send(valid);
+});
+
+app.get("/validateHour", (req, res) => {
+    const id = parseInt(req.query.id) + 1;
+    let valid = stadiums.filter(valid => valid.id === id);
+    res.send(valid);
 });
 
 app.listen(port, (req, res) => {{

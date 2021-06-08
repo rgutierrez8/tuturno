@@ -1,0 +1,119 @@
+section{
+    padding: 40px;
+}
+
+h2{
+    text-align: center;
+}
+
+.container{
+    background: rgb(221, 221, 221);
+    box-shadow: 2px 2px 20px black;
+    margin: 0px 150px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*============= IMAGEN PRINCIPAL Y PREVIWS ==================*/
+.imgContainer{
+    display: inline-block;
+    width: 440px;
+    height: 470px;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+.imgContainer img{
+    width: 440px;
+    height: 360px;
+}
+.imgContainer .imgPrev{
+    width: 480px;
+    height: 100px;
+}
+.imgContainer .imgPrev img{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+.selected{
+    border: 8px solid grey;
+}
+
+/*================ INFORMACIÓN Y TURNOS ==================*/
+.info{
+    position: relative;
+    left: 50px;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 50px;
+    vertical-align: top;
+    padding: 10px;
+    padding-top: 0;
+}
+.info h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.info h3{
+    text-align: left;
+    margin: 0 15px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.hourContainer{
+    width: 80%;
+    text-align: center;
+    margin: 10px auto;
+}
+.hourList{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.taken{
+    background: red;
+    color: white;
+    pointer-events: none;
+}
+
+.selectedTurn{
+    background: green;
+    color: white;
+}
+
+.selectTurn{
+    margin-top: 20px;
+    background: none;
+    border: 2px solid black;
+    width: 120px;
+    height: 30px;
+    letter-spacing: 2px;
+}
+.selectTurn:hover{
+    background: black;
+    color: white;
+}
+
+/*=========== ESPECIFICACIONES ==============*/
+.specs{
+    margin: 20px;
+    margin-left: 150px;
+    text-align: left;
+}
+.specs h2{
+    border-top: 1px solid black;
+    text-decoration: underline;
+}
+.specs span{
+    font-weight: normal;
+}
