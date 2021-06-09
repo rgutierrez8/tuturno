@@ -28,7 +28,7 @@ section h2{
 }
 
 .help{
-    z-index: 100;
+    z-index: 1;
     background: rgba(0,0,0, .4);
     display: inline-block;
     border-radius: 15px;

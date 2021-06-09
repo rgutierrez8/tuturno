@@ -17,6 +17,18 @@ form{
     box-shadow: 2px 2px 20px rgba(0,0,0,1);
 }
 
+.formLog{
+    position: relative;
+    bottom: 30px;
+    background: rgba(201, 201, 201, .8);
+    width: 420px;
+    height: 330px;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,1);   
+}
+
 .inputData{
     position: relative;
     width: 100%;
@@ -43,7 +55,7 @@ form .inputData .inputValid:valid ~label{
     position: absolute;
     bottom: 10px;
     lefT: 0;
-    color: white;
+    color: rgb(4, 4, 100);
     pointer-events: none;
     font-size: 17px;
     transition: all 0.3s ease;

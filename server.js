@@ -67,6 +67,10 @@ app.get("/signUp", (req, res) => {
     
 });
 
+app.get("/logIn", (req, res) => {
+
+});
+
 app.get("/validate", (req, res) => {
     let valid = users.filter(user => user.name.includes(req.query.name));
     res.send(valid);

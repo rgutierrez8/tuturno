@@ -35,7 +35,7 @@ nav{
     height: 45px;
     background: black;
     padding: 10px;
-    z-index: 11111;
+    z-index: 11;
 }
 nav button{
     position: relative;
@@ -56,7 +56,7 @@ nav button{
 
 .nav-container button:hover i{
     transition: .5s;
-    color:greenyellow;
+    color:rgb(45, 196, 45);
 }
 
 .userSection{
@@ -70,7 +70,9 @@ nav button{
     text-decoration: none;
     color: white;
     margin: 10px;
+    padding: 5px 20px;
 }
+
 /*===== SECTION =======*/
 .main{
     padding: 30px;
