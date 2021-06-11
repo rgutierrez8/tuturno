@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rgutierrez8/tuturno#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.2"
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2"
   }
 }

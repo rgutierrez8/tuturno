@@ -68,9 +68,12 @@ nav button{
 }
 .userSection a{
     text-decoration: none;
-    color: white;
-    margin: 10px;
+    color: rgb(156, 156, 156);
+    margin: 0px;
     padding: 5px 20px;
+}
+.userSection a:hover{
+    color: white;
 }
 
 /*===== SECTION =======*/
@@ -115,9 +118,72 @@ nav button{
 /*====== FOOTER ======*/
 
 .end{
-    height: 40px;
     background: black;
+    margin-top: 70px;
+    background-color: black;
+    -webkit-mask-image: url("../img/footer.svg");
+    mask-image: url("../img/footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
     color: white;
     text-align: center;
     line-height: 35px;
+    padding: 50px;
+    padding-bottom: 10px;
+}
+
+.end .rightSide{
+    display: inline-block;
+    margin-right: 240px;
+    padding: 10px;
+    text-align: left;
+}
+.rightSide ul li{
+    margin: -10px;
+    color: rgb(156, 156, 156);
+}
+.end .rightSide a{
+    text-decoration: none;
+    color: rgb(156, 156, 156);
+}
+.end .rightSide a:hover{
+    color: white;
+}
+
+.end .leftSide{
+    display: inline-block;
+    margin-left: 240px;
+    vertical-align: top;
+}
+
+.leftSide .socialNetwork{
+    display: inline-block;
+    height: 45px;
+}
+
+.socialNetwork i{
+    position: relative;
+    top: 50px;
+    margin: 20px 10px;
+    font-size: 45px;
+    color: rgb(202, 202, 202);
+    -webkit-box-reflect: below 5px linear-gradient(transparent, black 300%);
+}
+.facebook i:hover{
+    color: rgb(4, 4, 214);
+    transition: 0.3s ease;
+}
+.instagram i:hover{
+    color: rgb(136, 43, 223);
+    transition: 0.3s ease;
+}
+
+.youtube i:hover{
+    color: red;
+    transition: 0.3s ease;
+}
+
+.end p{
+    margin: 0;
+    padding: 0;
 }

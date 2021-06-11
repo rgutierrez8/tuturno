@@ -1,8 +1,8 @@
 const express = require("express");
-const { ExpressHandlebars } = require("express-handlebars");
 const expHbs = require("express-handlebars");
-const app = express();
+const expSession = require("express-session");
 const path = require("path");
+const app = express();
 const port = 3000;
 
 const stadiums = require("./stadiums.json");
@@ -15,11 +15,19 @@ app.engine("handlebars", expHbs({
 app.set("view engine", "handlebars");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(expSession({
+    secret: "@/TuTurno2021-ProyectoFullStackWebDeveloper/@",
+}));
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "client")));
 
+
+//COMIENZO DE ENDPOINTS
 app.get("/", (req, res) => {
-    res.redirect(path.join(__dirname, "client/index.html"));
+    res.render("index", {
+        title: "Tu Turno",
+    });
 });
 
 app.get("/searchTurn", (req, res) => {
@@ -51,11 +59,20 @@ app.get("/searchTurn", (req, res) => {
 });
 
 app.get("/selectTurn", (req, res) => {
+    let local;
+    let hour;
+    if(!req.session.username){
+        res.redirect("/");
+        return;
+    }
 
-    const local = stadiums.filter(local => local.name.includes(req.query.name));
-    const hour = Object.keys(local[0].available);
-
+    if(req.query.name){
+        local = stadiums.filter(local => local.name.includes(req.query.name));
+        hour = Object.keys(local[0].available);
+    }
+    console.log(req.session.username);
     res.render("stadium", {
+        cookies: req.session,
         local,
         otherCSS: "stadium.css",
         script: "stadium.js",
@@ -67,10 +84,32 @@ app.get("/signUp", (req, res) => {
     
 });
 
-app.get("/logIn", (req, res) => {
-
+app.post("/logIn", (req, res) => {
+    const user = getUser();
+    if(user){
+        req.session.username = user.username;
+        req.session.loged = true;
+        res.redirect("/selectTurn");
+    }
 });
 
+app.get("/loged", (req, res) => {
+    const user = getUser();
+    if(user){
+        req.session.username = user.username;
+        req.session.loged = true
+    }
+    console.log("session");
+    console.log(req.session);
+});
+
+function getUser(){
+    return users.find(user => user.username == "winnions" && user.password == "holamundo");
+}
+
+
+
+//ENDPOINTS USADOS PARA FUNCIONES DE CONTROL EN BUSQUEDA POR HORA Y USUARIO EXISTENTE
 app.get("/validate", (req, res) => {
     let valid = users.filter(user => user.name.includes(req.query.name));
     res.send(valid);
