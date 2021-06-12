@@ -1,6 +1,7 @@
 const express = require("express");
 const expHbs = require("express-handlebars");
 const expSession = require("express-session");
+const db = require("./db");
 const path = require("path");
 const app = express();
 const port = 3000;
