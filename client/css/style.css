@@ -37,9 +37,21 @@ nav{
     padding: 10px;
     z-index: 11;
 }
+
+.btnBack{
+    position: relative;
+    display: inline-block;
+    left: 20px;
+    color: rgb(156, 156, 156);
+    font-size: 20px;
+}
+.btnBack:hover{
+    color: white;
+}
+
 nav button{
     position: relative;
-    left: 600px;
+    left: 550px;
     width: 300px;
     height: 43px;
     border: 1px solid white;
@@ -72,8 +84,50 @@ nav button{
     margin: 0px;
     padding: 5px 20px;
 }
+
+.userSection i{
+    color: white;
+    color: rgb(156, 156, 156);
+    position: relative;
+    right: 20px;
+    bottom: 3px;
+}
+
 .userSection a:hover{
     color: white;
+}
+
+.usrBtn:hover a, .usrBtn:hover i{
+    color: white;
+}
+
+.userBarHidden{
+    background: black;
+    position: absolute;
+    top: -100px;
+    left: 1159px;
+    width: 200px;
+    text-align: center;
+    z-index: 1;
+    transition: .5s ease;
+}
+.userBar{
+    top: 65px;
+}
+
+.userBar a{
+    display: block;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    width: 200px;
+    height: 34px;
+}
+.userBar a:hover{
+    border: 2px solid black;
+    background: white;
+    color: black;
 }
 
 /*===== SECTION =======*/

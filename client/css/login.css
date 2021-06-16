@@ -1,14 +1,18 @@
-.formContainer{
-    position: fixed;
-    top: 120px;
-    left: 40%;
-    z-index: 1111111;
+section{
+    min-height: 400px;
+}
+
+.formContainerHTML{
+    position: relative;
+    top: 90px;
+    left: 35%;
+    z-index: 0;
 }
 
 form{
     position: relative;
     bottom: 30px;
-    background: rgba(201, 201, 201, .8);
+    background: rgb(201, 201, 201);
     width: 420px;
     height: 530px;
     box-sizing: border-box;
@@ -20,7 +24,7 @@ form{
 .formLog{
     position: relative;
     bottom: 30px;
-    background: rgba(201, 201, 201, .8);
+    background: rgb(201, 201, 201);
     width: 420px;
     height: 330px;
     box-sizing: border-box;
@@ -63,7 +67,7 @@ form .inputData .inputValid:valid ~label{
 
 form input[type="submit"]{
     border: 2px solid black;
-    margin: 10px 30px;
+    margin: 10px 28px;
     background: none;
     width: 120px;
     height: 35px;

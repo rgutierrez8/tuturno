@@ -6,30 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/logreg.css">
     <link rel="stylesheet" href="css/{{otherCSS}}">
     <title>{{docTitle}}</title>
 </head>
 <body>
     <nav class="nav-container">
+        <div class="btnBack" id="btnBack"><i class="fas fa-angle-double-left"></i></div>
         <button id="btnSearch">Ver turnos disponibles<i class="fas fa-map-marker-alt"></i></button>
-        <div class="userSection">
+        <div class="userSection" id="userSection">
             {{#if cookies.loged}}
-            <a href="#">{{cookies.username}}</a>
+            <div class="usrBtn" id="usrBtn">
+                <a href="#">{{cookies.username}}</a>
+                <i class="fas fa-sort-down"></i>
+            </div>
             {{else}}
             <a href="#" id="signUp">Registrarse</a>
             <a href="#" id="logIn">Ingresar</a>
             {{/if}}
         </div>
     </nav>
-    <h2>{{description}}</h2>
+    <h2 id="h2">{{description}}</h2>
     <section>
+        <div class="userBarHidden" id="userBar">
+            <a href="/profile">PERFIL</a>
+            <a href="/logout" id="logout">SALIR</a>
+        </div>
         {{{body}}}
     </section>
     <footer class="end">
         <div class="rightSide">
             <ul>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/contact">Contacto</a></li>
                 <li><a href="#">Registra tu cancha</a></li>
                 <li><a href="#">F&Q</a></li>
                 <li>Localización: Concepción - Tucuman - Argentina</li>
@@ -52,6 +60,7 @@
     <script src="js/index.js"></script>
     <script src="js/register.js"></script>
     <script src="js/logIn.js"></script>
+    <script src="js/profile.js"></script>
     <script src="js/{{script}}"></script>
 </body>
 </html>

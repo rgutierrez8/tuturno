@@ -1,0 +1,71 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+}
+
+h2{
+    text-align: center;
+}
+
+.container{
+    background: rgb(201, 201, 201);
+    width: 700px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,.5);
+    padding: 10px;
+}
+
+.inputData{
+    position: relative;
+    left: 15%;
+    height: 43px;
+    width: 70%;
+    margin: 15px;
+}
+
+.inputData input{
+    width: 100%;
+    height: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: none;
+}
+
+.inputData label{
+    font-size: 17px;
+    position: absolute;
+    bottom: 10px;
+    color: rgb(4, 4, 100);
+    transition: all 0.3s ease
+}
+.inputData input:focus ~label,
+.inputData .inputValid:valid ~label{
+    transform: translateY(-20px);
+    font-size: 15px;
+}
+
+input[type="submit"]{
+    border: 2px solid black;
+    margin: 10px 28px;
+    background: none;
+    width: 120px;
+    height: 35px;
+}
+input[type="submit"]:hover{
+    background: black;
+    color: white;
+    transition: .5s;
+}
+
+.messageError{
+    color: rgb(201, 9, 9);
+    font-size: 18px;
+    font-weight: bold;
+}
+.messageHidden{
+    visibility: hidden;
+}

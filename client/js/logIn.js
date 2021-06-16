@@ -9,7 +9,6 @@ const inputPass = document.createElement("input");
 const labelPass = document.createElement("label");
 const btnSubmit = document.createElement("input");
 const btnCancel = document.createElement("input");
-const pAlertLog = document.createElement("p");
 
 
 btnLogin.addEventListener("click", function(){
@@ -30,12 +29,14 @@ btnLogin.addEventListener("click", function(){
     
     inputUser.type = "text";
     inputUser.setAttribute("id", "inputUser");
+    inputUser.setAttribute("name", "user");
     inputUser.setAttribute("autocomplete", "off");
 
     labelUser.textContent = "Usuario";
 
     inputPass.type = "password";
     inputPass.setAttribute("id", "inputPass");
+    inputPass.setAttribute("name", "password");
     
     labelPass.textContent = "Contraseña";
 
@@ -47,10 +48,6 @@ btnLogin.addEventListener("click", function(){
     btnCancel.type = "submit";
     btnCancel.setAttribute("value", "Cancelar");
     btnCancel.classList.add("btnLog");
-
-    pAlertLog.textContent = "Mensaje de error";
-    pAlertLog.setAttribute = ("id", "pAlert");
-    pAlertLog.classList.add("alertHidden");
 
     divUser.appendChild(inputUser);
     divUser.appendChild(labelUser);
@@ -64,13 +61,15 @@ btnLogin.addEventListener("click", function(){
     formLog.appendChild(divPass);
     formLog.appendChild(btnSubmit);
     formLog.appendChild(btnCancel);
-    formLog.appendChild(pAlertLog);
+
 
     formContainer.appendChild(formLog);
     formContainer.classList.add("formContainer");
 
 
-    document.body.appendChild(formContainer);
+    if(!document.body.contains(form)){
+        document.body.appendChild(formContainer);
+    }
 });
 
 btnCancel.addEventListener("click", function(){
@@ -97,3 +96,4 @@ inputPass.addEventListener("change", function(){
         inputPass.classList.add("inputValid");
     }
 });
+

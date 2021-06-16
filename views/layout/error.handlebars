@@ -14,36 +14,9 @@
     <nav class="nav-container">
         <div class="btnBack" id="btnBack"><i class="fas fa-angle-double-left"></i></div>
         <button id="btnSearch">Ver turnos disponibles<i class="fas fa-map-marker-alt"></i></button>
-        <div class="userSection" id="userSection">
-            {{#if cookies.loged}}
-            <div class="usrBtn" id="usrBtn">
-                <a href="#">{{cookies.username}}</a>
-                <i class="fas fa-sort-down"></i>
-            </div>
-            {{else}}
-            <a href="#" id="signUp">Registrarse</a>
-            <a href="#" id="logIn">Ingresar</a>
-            {{/if}}
-        </div>
     </nav>
+    <h2>{{description}}</h2>
     <section>
-        <div class="userBarHidden" id="userBar">
-            <a href="/profile">PERFIL</a>
-            <a href="/logout" id="logout">SALIR</a>
-        </div>
-        <h2>{{description}}</h2>
-        <div class="filter">
-            <i class="fas fa-question-circle" id="helpButton"></i>
-            <div class="help helpHidden" id="helpContainer">
-                <p>-Buscar por nombre de cancha</p>
-                <p>-Buscar por horario deseado</p>
-                <p>-Dejar campos vacios muestr las canchas con turnos disponibles</p>
-            </div>
-            <input tipe="text" id="inputStadium" placeholder="Cancha">
-            <input type="time" min="14:00" max="23:00" id="inputTime">
-            <input type="submit" id="inputSubmit" value="Filtrar">
-            <p id="pAlert" class="alertHidden">Mensaje de alerta por acción incorrecta</p>
-        </div>
         {{{body}}}
     </section>
     <footer class="end">
@@ -69,10 +42,7 @@
         </div>
         <p>&copy; TU TURNO - 2021</p>
     </footer>
-    <script src="js/list.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/register.js"></script>
-    <script src="js/profile.js"></script>
-    <script src="js/logIn.js"></script>
+    <script src="js/log.js"></script>
 </body>
 </html>

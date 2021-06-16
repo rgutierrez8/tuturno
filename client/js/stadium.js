@@ -12,22 +12,15 @@ const divTurns = turns.children;
 window.onload = load;
 function load(){
     const xhr = new XMLHttpRequest();
-
+    
     xhr.addEventListener("load", function(){
         const response = JSON.parse(xhr.responseText);
         const available = response[0].available;
         let count = 14;
-
-        for(const element in available){
+        for(let i=0; i<available.length; i++){
             const divHour = document.createElement("div");
             divHour.textContent = count;
-            if(available[element] === "taken"){
-                divHour.classList.add("taken");
-                divHour.classList.add("hourList");
-            }
-            else{
-                divHour.classList.add("hourList");
-            }
+            divHour.classList.add("hourList");
             
             //CONTROL PARA QUE SOLO UN HORARIO PUEDA SER SELECCIONADO (EXCLUYE TURNO OCUPADO)
             divHour.addEventListener("click", function(){
@@ -41,7 +34,7 @@ function load(){
                     }
                 }
             });
-            count += 1;
+            count += 1; 
             hourContainer.appendChild(divHour);
         }
         

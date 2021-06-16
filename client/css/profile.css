@@ -1,0 +1,65 @@
+h2{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    text-align: center;
+    background: rgb(201, 201, 201);
+    margin: 40px 100px;
+    padding: 30px;
+    width: 500px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.inputData{
+    position: relative;
+    left: 90px;
+    width: 60%;
+    height: 40px;
+    margin: 15px;
+}
+
+.inputData input{
+    width: 90%;
+    height: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.inputData input:focus ~label{
+    transform: translateY(-20px);
+    font-size: 15px;
+}
+.inputData label{
+    position: absolute;
+    bottom: 10px;
+    lefT: 0;
+    color: rgb(4, 4, 100);
+    pointer-events: none;
+    font-size: 17px;
+    transform: translateY(-20px);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]{
+    border: 2px solid black;
+    margin: 10px 28px;
+    background: none;
+    width: 120px;
+    height: 35px;
+}
+input[type="submit"]:hover{
+    background: black;
+    color: white;
+    transition: .5s;
+}

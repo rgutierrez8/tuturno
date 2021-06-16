@@ -7,18 +7,8 @@
         "price": 100,
         "nightPrice": 1200,
         "floor": "Mosaicos",
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        },
+        "available":["16", "17", "18", "19", "21", "22", "23", "00"],
+        "taken": ["14", "15", "20"],
         "stage":{
             "one": "cancha1.jpg"
         },
@@ -32,18 +22,8 @@
         "price": 1500,
         "nightPrice": 1800,
         "floor": "Cesped sintético",
-        "available":{
-            "14": "taken",
-            "15": "taken",
-            "16": "taken",
-            "17": "taken",
-            "18": "taken",
-            "19": "taken",
-            "20": "taken",
-            "21": "taken",
-            "22": "taken",
-            "23": "available"
-        },
+        "available":["16", "17", "18", "19", "20", "21", "23", "00"],
+        "taken": ["14", "15", "22"],
         "logo": "Aeroclub.png"
     },
     {
@@ -54,18 +34,8 @@
         "price": 1500,
         "nightPrice": 1700,
         "floor": "Cesped sintético",
-        "available":{
-            "14": "taken",
-            "15": "taken",
-            "16": "taken",
-            "17": "taken",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        },
+        "available":["16", "17", "18", "19", "21", "22", "23", "00"],
+        "taken": ["14", "15", "20"],
         "logo": "Gelsi.png"
     },
     {
@@ -76,18 +46,8 @@
         "price": 1100,
         "nightPrice": 1300,
         "floor": "Cesped",
-        "available":{
-            "14": "available",
-            "15": "available",
-            "16": "taken",
-            "17": "available",
-            "18": "available",
-            "19": "available",
-            "20": "available",
-            "21": "available",
-            "22": "available",
-            "23": "available"
-        },
+        "available":["14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"],
+        "taken": [],
         "stage":{
             "one": "cancha1.jpg",
             "two": "cancha2.jpg",

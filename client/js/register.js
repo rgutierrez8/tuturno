@@ -30,6 +30,7 @@ const p = document.createElement("p");
 
 
 signUp.addEventListener("click", function(){
+    
     if(nav){
         nav.style.filter = "blur(4px)";
     }

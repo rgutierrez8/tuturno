@@ -5,6 +5,7 @@
         "email": "ramongutierrez523@gmail.com",
         "username": "winnions",
         "password": "holamundo",
-        "loged": false
+        "loged": false,
+        "admin": true
     }
 ]
