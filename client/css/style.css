@@ -1,8 +1,12 @@
 body{
     margin: 0;
     background: #f2f2f2;
-    font-family: 'Dubai';
+    font-family: 'Ubuntu';
     overflow-x: hidden;
+}
+
+label{
+    font-family: 'zen dots';
 }
 
 /*====== HEADER =========*/
@@ -20,6 +24,7 @@ header{
 
 blockquote{
     color:white;
+    font-family: 'zen dots';
     font-size: 28px;
     text-align: right;
     position: relative;
@@ -32,33 +37,50 @@ nav{
     top: 0;
     margin: 0;
     width: 100vw;
-    height: 45px;
+    height: 50px;
     background: black;
     padding: 10px;
     z-index: 11;
 }
 
-.btnBack{
+.btnHome{
+    height: 40px;
     position: relative;
+    top: 5px;
     display: inline-block;
     left: 20px;
     color: rgb(156, 156, 156);
     font-size: 20px;
+    padding: 0px;
 }
-.btnBack:hover{
+
+.btnHome p{
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    font-family: 'zen dots';
+    font-size: 20px;
+    font-weight: bold;
+}
+.btnHome a{
+    color: rgb(156, 156, 156);
+}
+.btnHome a:hover{
     color: white;
 }
 
 nav button{
     position: relative;
-    left: 550px;
+    top: 2px;
+    left: 450px;
     width: 300px;
-    height: 43px;
+    height: 40px;
     border: 1px solid white;
     border-radius: 5px;
     background: none;
     color: white;
-    font-size: 18px;
+    font-family: 'zen dots';
+    font-size: 14px;
     letter-spacing: 2px;
     box-sizing: border-box;
 }
@@ -74,12 +96,15 @@ nav button{
 .userSection{
     display: inline-block;
     position: relative;
-    left: 920px;
+    top: 2px;
+    left: 800px;
     font-size: 16px;
     letter-spacing: 2px;
 }
 .userSection a{
     text-decoration: none;
+    font-family: 'zen dots';
+    font-size: 12px;
     color: rgb(156, 156, 156);
     margin: 0px;
     padding: 5px 20px;
@@ -104,7 +129,7 @@ nav button{
 .userBarHidden{
     background: black;
     position: absolute;
-    top: -100px;
+    top: -10%;
     left: 1159px;
     width: 200px;
     text-align: center;
@@ -117,8 +142,11 @@ nav button{
 
 .userBar a{
     display: block;
+    padding: 8px;
     box-sizing: border-box;
     color: white;
+    font-family: 'zen dots';
+    font-size: 11px;
     text-decoration: none;
     letter-spacing: 2px;
     width: 200px;
@@ -152,15 +180,22 @@ nav button{
 
 .coment-users{
     text-align: center;
+    padding: 50px 60px;
+}
+.username-comment{
+    font-family: 'Audiowide';
 }
 .coment{
-    border: 1px solid black;
+    display: inline-block;
+    background: black;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    color: white;
     border-radius: 15px;
     width: 300px;
-    height: 320px;
-    display: inline-block;
+    height: 310px;
     margin: 40px;
     padding: 20px;
+    overflow: hidden;
 }
 .coment img{
     border-radius: 100px;
@@ -194,11 +229,15 @@ nav button{
 }
 .rightSide ul li{
     margin: -10px;
+    font-family: 'zen dots';
     color: rgb(156, 156, 156);
+    font-size: 14px;
+    list-style: none;
 }
 .end .rightSide a{
     text-decoration: none;
     color: rgb(156, 156, 156);
+    font-size: 14px;
 }
 .end .rightSide a:hover{
     color: white;
@@ -237,7 +276,18 @@ nav button{
     transition: 0.3s ease;
 }
 
-.end p{
+.bottom-footer p{
+    display: inline-block;
+    font-family: 'Zen dots';
+    font-weight: bold;
+    color: white;
     margin: 0;
     padding: 0;
+}
+
+.bottom-footer .imgLogoFooter{
+    position: relative;
+    top: 3px;
+    width: 40px;
+    vertical-align: bottom;
 }

@@ -1,0 +1,53 @@
+{{#if register}}
+    <div class="container">
+        <h3>Tu cancha fue registrada con exito</h3>
+        <h3>Luego de realizar las correspondientes verificaciones, nos estaremos comunicando con usted para terminar de ultimar detalles.</h3>
+        <h3>Le pedimos sea paciente, este proceso no demorará mucho.</h3>
+        <h3>Muchas gracias por confiar en nosotros.</h3>
+        <h3>Atte. <span>Tu Turno Team</span></h3>
+    </div>
+{{else}}
+<div class="container">
+    <form class="stadiumForm" method="post" action="/stadium/uploadStadium" enctype="multipart/form-data">
+        <div class="inputData">
+            <input type="text" id="inputOwnerName" name="ownerName" required>
+            <label>Nombre Dueño:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" id="inputLocalName" name="localName" required>
+            <label>Nombre Cancha:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" id="inputPhone" name="phone" required>
+            <label>Teléfono:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" id="inputAddress" name="address" required>
+            <label>Dirección:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" name="price" id="price" required>
+            <label>Precio:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" name="nightPrice" id="nightPrice" required>
+            <label>Precio de noche:</label>
+        </div>
+        <div class="inputData">
+            <input type="text" name="floor" id="floor" required>
+            <label>Tipo de piso:</label>
+        </div>
+        <div class="inputData">
+            <input type="file" name="stadiumImages" id="images" multiple>
+            <label class="inputFile">Imagenes:</label>
+        </div>
+        <div class="inputData">
+            <input type="checkbox" id="check">
+            He leído y acepto los terminos y condiciones
+        </div>
+        <input type="submit" value="REGISTRAR" id="inputRegister" disabled>
+        <input type="submit" value="REINICIAR" id="inputCancel">
+    </form>
+    <p id="alert" class="alertHidden">Todos los campos son requeridos</p>
+</div>
+{{/if}}

@@ -9,10 +9,12 @@ btnBack.addEventListener("click", function(){
 });
 
 btnSearch.addEventListener("click", function(){
-    window.location.href = `/searchTurn`;
+    window.location.href = `/turn/searchTurn`;
 });
 
-userSection.addEventListener("click", function(){
-    userBar.classList.toggle("userBar");
-    console.log("si");
-});
+if(userSection){
+    userSection.addEventListener("click", function(){
+        userBar.classList.toggle("userBar");
+        console.log("si");
+    });
+}

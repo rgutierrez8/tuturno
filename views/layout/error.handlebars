@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Herr+Von+Muellerhoff&family=Ubuntu&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logreg.css">
     <link rel="stylesheet" href="css/{{otherCSS}}">
     <title>{{docTitle}}</title>
 </head>
 <body>
     <nav class="nav-container">
-        <div class="btnBack" id="btnBack"><i class="fas fa-angle-double-left"></i></div>
+        <div class="btnHome" id="btnBack">
+            <a href="/"><p>TuTurno</p></a>
+        </div>
         <button id="btnSearch">Ver turnos disponibles<i class="fas fa-map-marker-alt"></i></button>
     </nav>
     <h2>{{description}}</h2>
@@ -23,8 +28,8 @@
         <div class="rightSide">
             <ul>
                 <li><a href="/contact">Contacto</a></li>
-                <li><a href="#">Registra tu cancha</a></li>
-                <li><a href="#">F&Q</a></li>
+                <li><a href="/stadium/stadiumRegister">Registra tu cancha</a></li>
+                <li><a href="/faq">F&Q</a></li>
                 <li>Localización: Concepción - Tucuman - Argentina</li>
                 <li>Teléfono: +5493865348279</li>
             </ul>
@@ -40,7 +45,10 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <p>&copy; TU TURNO - 2021</p>
+        <div class="bottom-footer">
+            <img src="img/logo.png" class="imgLogoFooter">
+            <p id="pFooter">&copy; TU TURNO - 2021</p>
+        </div>
     </footer>
     <script src="js/index.js"></script>
     <script src="js/log.js"></script>

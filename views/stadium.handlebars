@@ -1,28 +1,43 @@
 <div class="container">
-    {{#each local}}
+    {{#if data}}
     <div class="imgContainer">
-        <img id="imgView" src="img/canchas/{{this.name}}/{{this.stage.one}}">
+        <img id="imgView" src="img/canchas/{{data.name}}/{{data.stage.one}}">
         <div class="imgPrev">
-            <img id="img1" class="selected" src="img/canchas/{{this.name}}/{{this.stage.one}}">
-            <img id="img2" src="img/canchas/{{this.name}}/{{this.stage.two}}">
-            <img id="img3" src="img/canchas/{{this.name}}/{{this.stage.three}}">
+            <img id="img1" class="selected" src="img/canchas/{{data.name}}/{{data.stage.one}}">
+            <img id="img2" src="img/canchas/{{data.name}}/{{data.stage.two}}">
+            <img id="img3" src="img/canchas/{{data.name}}/{{data.stage.three}}">
         </div>
     </div>
     <div class="info">
-        <h1>{{this.name}}</h1>
-        <h3>Precio: ${{this.price}} /hs día</h3>
-        <h3>Precio: ${{this.nightPrice}} /hs noche</h2>
+        <h1>{{data.name}}</h1>
+        <h3>Precio: ${{data.price}} /hs día</h3>
+        <h3>Precio: ${{data.nightPrice}} /hs noche</h2>
         <h3>Turnos: </h3>
         <div id="hourContainer" class="hourContainer">
         </div>
-        <button class="selectTurn" id="selectTurn">SOLICITAR</button>
+        <button class="selectTurn" id="btnSelectTurn" disabled>SOLICITAR</button>
     </div>
     <div class="specs">
         <h2>Especificaciones:</h2>
-        <h3>Dirección: <span>{{this.address}}</span></h3>
-        <h3>Teléfono: <span>{{this.phone}}</span></h3>
-        <h3>Tipo de piso: <span>{{this.floor}}</span></h3>
+        <h3>Dirección: <span>{{data.address}}</span></h3>
+        <h3>Teléfono: <span>{{data.phone}}</span></h3>
+        <h3>Tipo de piso: <span>{{data.floor}}</span></h3>
         <h3>Cantidad jugadores: <span>5 vs 5 (Recomendado)</span></h3>
     </div>
-    {{/each}}
+    <div class="rentTurn" id="rentTurn">
+        <div class="confirm" id="confirm">
+            <div class="confirmation" id="confirmation">
+                <p id="questionConfirm">Texto de confirmación de turno</p>
+                <input type="submit" id="inputConfirm" value="CONFIRMAR">
+                <input type="submit" id="inputCancel" value="CANCELAR">
+            </div>
+            <div class="confirmed" id="confirmed">
+                <p id="messageConfirm">Su reserva fue registrada con exito. Muchas gracias!</p>
+                <p>Redirigiendo....</p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <h2>Lo sentimos, la cancha que buscas ya no forma parte de Tu Turno</h2>
+    {{/if}}
 </div>

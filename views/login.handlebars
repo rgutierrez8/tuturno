@@ -1,5 +1,5 @@
 <div class="formContainerHTML">
-    <form method="post" action="/logIn" class="formLog" id="formLog">
+    <form method="post" action="/user/logIn" class="formLog" id="formLog">
         <div class="inputData">
             <input type="text" name="user" id="inputUser" autocomplete="off">
             <label>Usuario:</label>
@@ -10,6 +10,6 @@
         </div>
         <input type="submit" id="inputSubmit" class="btnLog" value="INGRESAR">
         <input type="submit" id="inputCancelar" class="btnLog" value="BORRAR">
-        <p>{{pAlert}}</p>
+        <p id="alert-p">{{pAlert}}</p>
     </form>
 </div>

@@ -12,7 +12,7 @@
     z-index: 1111111;
 }
 
-form{
+.form{
     position: relative;
     bottom: 30px;
     background: rgba(201, 201, 201, .8);
@@ -53,10 +53,10 @@ form{
     font-size: 16px;
 }
 
-form .inputData input:focus ~label,
-form .inputData .inputValid:valid ~label{
+.inputData input:focus ~label,
+.inputData .inputValid:valid ~label{
     transform: translateY(-20px);
-    font-size: 15px;
+    font-size: 12px;
 }
 .inputData label{
     position: absolute;
@@ -64,20 +64,30 @@ form .inputData .inputValid:valid ~label{
     lefT: 0;
     color: rgb(4, 4, 100);
     pointer-events: none;
-    font-size: 17px;
+    font-size: 15px;
     transition: all 0.3s ease;
 }
 
-form input[type="submit"]{
+input[type="submit"]{
     border: 2px solid black;
     margin: 10px 28px;
     background: none;
     width: 120px;
     height: 35px;
 }
-form input[type="submit"]:hover{
+input[type="submit"]:hover{
     background: black;
     color: white;
     transition: .5s;
 }
 
+#alert{
+    color: rgb(163, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+}
+.alertHidden{
+    visibility: hidden;
+}

@@ -37,7 +37,7 @@ section{
 
 .inputData input:focus ~label{
     transform: translateY(-20px);
-    font-size: 15px;
+    font-size: 12px;
 }
 .inputData label{
     position: absolute;
@@ -45,7 +45,7 @@ section{
     lefT: 0;
     color: rgb(4, 4, 100);
     pointer-events: none;
-    font-size: 17px;
+    font-size: 12px;
     transform: translateY(-20px);
     font-size: 15px;
     transition: all 0.3s ease;

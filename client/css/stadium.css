@@ -118,3 +118,43 @@ h2{
 .specs span{
     font-weight: normal;
 }
+
+
+/*============= CONFIRMAR TURNO ====================*/
+.rentTurn{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    background: rgba(0,0,0,.5);
+}
+
+.confirm{
+    position: relative;
+    top: 250px;
+    background: white;
+    width: 100%;
+    height: 250px;
+}
+
+
+.confirmation, .confirmed{
+    position: relative;
+    top: 70px;
+}
+
+.confirmed{
+    z-index: 111;
+    display: none;
+}
+
+.showConfirm{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}

@@ -28,6 +28,8 @@ const inputS = document.createElement("input")
 const inputC = document.createElement("input");
 const p = document.createElement("p");
 
+let errors = 0;
+
 
 signUp.addEventListener("click", function(){
     
@@ -50,31 +52,37 @@ signUp.addEventListener("click", function(){
     div5.classList.add("inputData");
     div6.classList.add("inputData");
 
-    form.setAttribute("method", "POST");
-    form.setAttribute("action", "/signUp");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "/user/signUp");
+    form.classList.add("form");
 
     inputN.type = "text";
     inputN.setAttribute("id", "inputName");
+    inputN.setAttribute("name", "name");
     inputN.setAttribute("autocomplete", "off");
     labelN.textContent = "Nombre";
 
     inputLN.type = "text";
     inputLN.setAttribute("id", "inputLastName");
+    inputLN.setAttribute("name", "lastName");
     inputLN.setAttribute("autocomplete", "off");
     labelLN.textContent = "Apellido";
 
     inputE.type = "text";
     inputE.setAttribute("id", "email");
+    inputE.setAttribute("name", "email");
     inputE.setAttribute("autocomplete", "off");
     labelE.textContent = "Email";
 
     inputU.type = "text";
     inputU.setAttribute("id", "user");
+    inputU.setAttribute("name", "username");
     inputU.setAttribute("autocomplete", "off");
     labelU.textContent = "Usuario";
 
     inputP.type = "password";
     inputP.setAttribute("id", "inputPass");
+    inputP.setAttribute("name", "password");
     inputP.setAttribute("autocomplete", "off");
     labelP.textContent = "Contraseña";
 
@@ -86,6 +94,7 @@ signUp.addEventListener("click", function(){
     inputS.type = "submit";
     inputS.setAttribute("id", "inputRegister");
     inputS.setAttribute("value", "Registrarse");
+    inputS.setAttribute("disabled", "true");
 
     inputC.type = "submit";
     inputC.setAttribute("value", "Cancelar");
@@ -123,6 +132,12 @@ signUp.addEventListener("click", function(){
 });
 
 inputC.addEventListener("click", function(){
+    inputN.value = "";
+    inputLN.value = "";
+    inputU.value = "";
+    inputE.value = "";
+    inputP.value = "";
+    inputRP.value = "";
     document.body.removeChild(div);
     if(nav){
         nav.style.filter = "blur(0px)";
@@ -138,9 +153,10 @@ inputC.addEventListener("click", function(){
 
 
 function validar(text, error, numError){
+    console.log("entra");
+    errors=0;
     const xhr = new XMLHttpRequest();
     let idResponse = "";
-
     
     xhr.addEventListener("load", function(){
         const response = JSON.parse(xhr.responseText);
@@ -148,23 +164,36 @@ function validar(text, error, numError){
         
         for(let i=0; i<response.length; i++){
             if(numError===1){
-                idResponse = response[i].user;
+                idResponse = response[i].username;
             }
             else{
                 idResponse = response[i].email;
             }
             if(text === idResponse){
+                errors = 1;
                 p.textContent = error;
                 p.classList.remove("alertHidden");
+                inputS.disabled = true;
             }
-            else{
-                p.textContent = "";
+            if(text !== idResponse){
+                errors = 0;
+                p.textContent = error;
                 p.classList.add("alertHidden");
             }
         }
+        if(inputP.value !== inputRP.value){
+            p.textContent = "Las contraseñas no coinciden";
+            p.classList.remove("alertHidden");
+            inputS.disabled = true;
+            errors = 1;
+        }
+        if(errors === 0){
+            p.textContent = "";
+            inputS.disabled = false;
+        }
     });
 
-    xhr.open("GET", `/validate?name=${inputName.value}`);
+    xhr.open("GET", `/validation/validateRegister?userName=${inputU.value}&email=${inputE.value}`);
     xhr.send();
 }
 
@@ -195,7 +224,7 @@ inputU.addEventListener("change", function(){
     }
     error = "Usuario existente";
     numError = 1;
-    validar(user.value, error, numError);
+    validar(inputU.value, error, numError);
 });
 
 inputE.addEventListener("change", function(){
@@ -207,10 +236,10 @@ inputE.addEventListener("change", function(){
     }
     error = "Email existente";
     numError = 2;
-    validar(email.value, error, numError);
+    validar(inputE.value, error, numError);
 });
 
-inputP.addEventListener("change", function(){
+inputP.addEventListener("input", function(){
     if(inputP.value){
         inputP.classList.add("inputValid");
     }
@@ -219,7 +248,7 @@ inputP.addEventListener("change", function(){
     }
 });
 
-inputRP.addEventListener("change", function(){
+inputRP.addEventListener("input", function(){
     if(inputRP.value){
         inputRP.classList.add("inputValid");
     }

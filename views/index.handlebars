@@ -29,29 +29,12 @@
             </div>
         </div>
         <div class="coment-users">
+            {{#each data}}
             <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
+                <img src="img/userPic/{{this.userPic}}" alt="foto-perfil">
+                <h3 class="username-comment">{{this.username}}</h3>
+                <p>{{this.comment}}</p>
             </div>
-            <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
-            </div>
-            <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
-            </div>
-            <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
-            </div>
-            <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
-            </div>
-            <div class="coment">
-                <img src="img/cancha.jpg" alt="foto-perfil">
-                <p>Aqui va un comentario traido desde la base de datos cuando se pueda traer y que todo quede lindo al igual que la foto de arriba que sería la de perfil.</p>
-            </div>
+            {{/each}}
         </div>
     </section>

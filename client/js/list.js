@@ -22,7 +22,7 @@ inputSubmit.addEventListener("click", function(){
             pAlert.classList.add("alertHidden");
         }
     }
-    window.location.href = `/searchTurn?${url}`;
+    window.location.href = `/turn/searchTurn?${url}`;
 });
 
 helpButton.addEventListener("click", function(){

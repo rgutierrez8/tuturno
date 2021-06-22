@@ -25,7 +25,7 @@ btnLogin.addEventListener("click", function(){
 
     formLog.classList.add("formLog");
     formLog.setAttribute("method", "post");
-    formLog.setAttribute("action", "/logIn");
+    formLog.setAttribute("action", "/user/logIn");
     
     inputUser.type = "text";
     inputUser.setAttribute("id", "inputUser");
@@ -73,7 +73,11 @@ btnLogin.addEventListener("click", function(){
 });
 
 btnCancel.addEventListener("click", function(){
+    inputUser.value = "";
+    inputPass.value = "";
+
     document.body.removeChild(formContainer);
+    
     if(nav){
         nav.style.filter = "blur(0px)";
     }

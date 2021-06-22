@@ -1,11 +1,13 @@
 <div class="results">
     {{#each turn}}
+    {{#if this.readyToList}}
     <div class="list">
-        <a href="/selectTurn?name={{this.name}}&index={{@index}}"><img src="img/Logo canchas/{{this.logo}}"></a>
+        <a href="/turn/selectTurn?name={{this.name}}&index={{this._id}}"><img src="img/Logo canchas/{{this.logo}}"></a>
         <div class="info">
-            <a href="/selectTurn?name={{this.name}}&index={{@index}}"><h3>{{this.name}}</h3></a>
+            <a href="/turn/selectTurn?name={{this.name}}&index={{this._id}}"><h3>{{this.name}}</h3></a>
             <p>${{this.price}}</p>
         </div>
     </div>
+    {{/if}}
     {{/each}}
 </div>

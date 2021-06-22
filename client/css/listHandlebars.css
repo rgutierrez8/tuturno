@@ -12,7 +12,7 @@ section h2{
     position: sticky;
     top: 150px;
     text-align: center;
-    width: 240px;
+    width: 250px;
     height: 290px;
     text-align: center;
     margin: 20px;
@@ -28,14 +28,18 @@ section h2{
 }
 
 .help{
+    position: relative;
+    top: 10px;
     z-index: 1;
     background: rgba(0,0,0, .4);
+    box-shadow: 24px 4px 4px rgba(0,0,0,.6);
     display: inline-block;
     border-radius: 15px;
     text-align: left;
     width: 230px;
-    height: 85%;
+    height: 90%;
     color: white;
+    font-size: 16px;
     padding: 5px;
 }
 .helpHidden{

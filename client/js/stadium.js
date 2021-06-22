@@ -4,9 +4,18 @@ const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");
 const hourContainer = document.getElementById("hourContainer");
 const url = window.location.href.split("&")[1].split("=")[1];
+const btnSelectTurn = document.getElementById("btnSelectTurn");
+const rentTurn = document.getElementById("rentTurn");
+const questionConfirm = document.getElementById("questionConfirm");
+const confirmation = document.getElementById("confirmation");
+const confirmed = document.getElementById("confirmed");
+const inputConfirm = document.getElementById("inputConfirm");
+const inputCancel = document.getElementById("inputCancel");
 
 const turns = document.getElementById("hourContainer");
 const divTurns = turns.children;
+let hour;
+let id;
 
 /*============ Carga de horarios disponibles =============*/
 window.onload = load;
@@ -16,10 +25,11 @@ function load(){
     xhr.addEventListener("load", function(){
         const response = JSON.parse(xhr.responseText);
         const available = response[0].available;
-        let count = 14;
+        id = response[0]._id;
+        
         for(let i=0; i<available.length; i++){
             const divHour = document.createElement("div");
-            divHour.textContent = count;
+            divHour.textContent = available[i];
             divHour.classList.add("hourList");
             
             //CONTROL PARA QUE SOLO UN HORARIO PUEDA SER SELECCIONADO (EXCLUYE TURNO OCUPADO)
@@ -33,14 +43,19 @@ function load(){
                         divHour.classList.add("selectedTurn");
                     }
                 }
+                
+                hour = divHour.textContent;
+                
+                if(divHour.classList.contains("selectedTurn")){
+                    btnSelectTurn.disabled = false;
+                }
             });
-            count += 1; 
             hourContainer.appendChild(divHour);
         }
         
     });
 
-    xhr.open("GET", `/validateHour?id=${url}`);
+    xhr.open("GET", `/validation/validateHour?id=${url}`);
     xhr.send();
 };
 
@@ -64,4 +79,33 @@ img3.addEventListener("click", function(){
     img3.classList.add("selected");
     img1.classList.remove("selected");
     img2.classList.remove("selected");
+});
+
+//============================ CONFIRMAR TURNO ========================
+btnSelectTurn.addEventListener("click", function(){
+    questionConfirm.textContent = `¿Estas seguro de reservar el turno de las ${hour}hs?`
+    rentTurn.classList.add("showConfirm");
+});
+
+inputConfirm.addEventListener("click", function(){
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("load", function(){
+        if(xhr.status === 200){console.log("entra al status");
+            confirmation.classList.add("hidden");
+            confirmed.classList.add("showConfirm");
+            console.log(window.location.href);
+            setTimeout(function(){
+                location.reload();
+            },1000);
+        }
+    });
+
+    xhr.open("GET", `/stadium/rentHour?hour=${hour}&id=${id}`);
+    xhr.send();
+});
+
+inputCancel.addEventListener("click", function(){
+    rentTurn.classList.remove("showConfirm");
 });
