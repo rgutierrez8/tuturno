@@ -1,6 +1,6 @@
 # **Tu Turno**
 
-*Aplicación web destinada a visualizar y solicitar turnos disponibles para canchas de futsal (fútbol 5). Las canchas, comentarios y los usuarios se encuentran en una base de datos *
+*Aplicación web destinada a visualizar y solicitar turnos disponibles para canchas de futsal (fútbol 5). Las canchas, comentarios y los usuarios se encuentran en una base de datos*
 
 ## Instalaciones necesarias
 
@@ -13,7 +13,7 @@
 ![Diagrama Proyecto Tu Turno (1)](https://user-images.githubusercontent.com/81074439/122856506-47494b80-d2ed-11eb-8175-776c479e614f.png)
 
 
-## Construido con :computer:
+## :computer:Construido con
 
     - HTML5
     - CSS3
@@ -22,9 +22,9 @@
     - Express
     - Mongo DB
 
-## Autor :man_technologist:
+## :man_technologist:Autor
 
     - Ramón Gutierrez 
-        - [Linkedin](https://www.linkedin.com/in/rgutierrez8/)
+    [Linkedin](https://www.linkedin.com/in/rgutierrez8/)
         - [GitHub](https://github.com/rgutierrez8)
 
